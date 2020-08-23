@@ -1,8 +1,5 @@
 DROP TABLE IF EXISTS public.patients;
 DROP TABLE IF EXISTS public.appointments;
-DROP TYPE IF EXISTS sex;
-
-CREATE TYPE sex AS ENUM ('MALE', 'FEMALE', 'UNKNOWN');
 
 CREATE TABLE public.patients
 (
@@ -10,7 +7,7 @@ CREATE TABLE public.patients
     firstname character varying NOT NULL,
     lastname character varying NOT NULL,
     personalidentitynumber character varying NOT NULL,
-    sex sex NOT NULL,
+    sex character varying NOT NULL,
     address character varying,
     PRIMARY KEY (id)
 );

@@ -23,7 +23,6 @@ public class PatientServiceImpl implements PatientService {
     @Autowired
     private PatientRepository patientRepository;
 
-
     @Override
     public PageResponse<PatientObject> getPatientPage(int perPage, int page) {
         Pageable pageable = PageRequest.of(page, perPage, Sort.by(Sort.Order.asc("id")));

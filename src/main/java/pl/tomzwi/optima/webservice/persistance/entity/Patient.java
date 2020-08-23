@@ -2,6 +2,8 @@ package pl.tomzwi.optima.webservice.persistance.entity;
 
 import lombok.Data;
 import lombok.ToString;
+import org.hibernate.annotations.Type;
+import org.hibernate.annotations.TypeDef;
 
 import javax.persistence.*;
 import java.util.List;
@@ -31,7 +33,7 @@ public class Patient {
     private String personalIdentityNumber;
 
     @Column( nullable = false )
-    @Enumerated(EnumType.STRING)
+    @Enumerated( EnumType.STRING )
     private Sex sex;
 
     private String address;
